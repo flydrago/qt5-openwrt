@@ -10,13 +10,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qt5
-PKG_VERSION:=5.12
-PKG_RELEASE:=6
-PKG_MD5SUM:=287d71e71ebd97f77220873e7b131b1a
+PKG_VERSION:=5.15.12
+PKG_MD5SUM:=3fb1cd4f763f5d50d491508b7b99571a
 
-PKG_SOURCE:=qt-everywhere-src-$(PKG_VERSION).$(PKG_RELEASE).tar.xz
-PKG_SOURCE_URL:=http://download.qt-project.org/archive/qt/$(PKG_VERSION)/$(PKG_VERSION).$(PKG_RELEASE)/single
-PKG_BUILD_DIR=$(BUILD_DIR)/qt-everywhere-src-$(PKG_VERSION).$(PKG_RELEASE)
+PKG_SOURCE:=qt-everywhere-opensource-src-$(PKG_VERSION).tar.xz
+PKG_SOURCE_URL:=https://mirrors.aliyun.com/qt/archive/qt/5.15/$(PKG_VERSION)/single
+PKG_BUILD_DIR=$(BUILD_DIR)/qt-everywhere-src-$(PKG_VERSION)
 PKG_BUILD_PARALLEL:=1
 PKG_USE_MIPS16:=0
 PKG_BUILD_DEPENDS:=libiconv
