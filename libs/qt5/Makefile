@@ -11,7 +11,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qt5
 PKG_VERSION:=5.15.12
-PKG_MD5SUM:=3fb1cd4f763f5d50d491508b7b99571a
+PKG_MD5SUM:=3fb1cd4f763f5d50d491508b7b99fb77
 
 PKG_SOURCE:=qt-everywhere-opensource-src-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=https://mirrors.aliyun.com/qt/archive/qt/5.15/$(PKG_VERSION)/single
