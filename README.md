@@ -7,6 +7,7 @@ Qt 5.15.12 for OpenWrt 19.07 with Modbus & SerialPort support
 - Qt 5.15.12 LTS version
 - SerialPort module for serial communication
 - SerialBus module for Modbus protocol support
+- WebSockets module for WebSocket communication
 
 ## Available Packages
 
@@ -20,6 +21,7 @@ Qt 5.15.12 for OpenWrt 19.07 with Modbus & SerialPort support
 - qt5-serialbus
 - qt5-xmlpatterns
 - qt5-test
+- qt5-websockets
 
 ## Installation
 

@@ -104,6 +104,12 @@ define Package/qt5-test
   DEPENDS+=+qt5-core
 endef
 
+define Package/qt5-websockets
+  $(call Package/qt5/Default)
+  TITLE+=websockets
+  DEPENDS+=+qt5-core +qt5-network
+endef
+
 define Build/Configure
 	$(INSTALL_DIR) $(PKG_BUILD_DIR)/qtbase/lib/fonts
 	$(INSTALL_DIR) $(PKG_BUILD_DIR)/qtbase/mkspecs/linux-openwrt-g++
@@ -273,6 +279,13 @@ define Package/qt5-test/install
 	$(CP) $(PKG_BUILD_DIR)/qtbase/lib/libQt5Test.la $(1)/usr/lib/
 endef
 
+define Package/qt5-websockets/install
+	$(INSTALL_DIR) $(1)/usr/lib/
+	$(CP) $(PKG_BUILD_DIR)/qtwebsockets/lib/libQt5WebSockets.so* $(1)/usr/lib/
+	$(CP) $(PKG_BUILD_DIR)/qtwebsockets/lib/libQt5WebSockets.prl $(1)/usr/lib/
+	$(CP) $(PKG_BUILD_DIR)/qtwebsockets/lib/libQt5WebSockets.la $(1)/usr/lib/
+endef
+
 $(eval $(call BuildPackage,qt5-core))
 $(eval $(call BuildPackage,qt5-concurrent))
 $(eval $(call BuildPackage,qt5-network))
@@ -283,3 +296,4 @@ $(eval $(call BuildPackage,qt5-serialport))
 $(eval $(call BuildPackage,qt5-serialbus))
 $(eval $(call BuildPackage,qt5-xmlpatterns))
 $(eval $(call BuildPackage,qt5-test))
+$(eval $(call BuildPackage,qt5-websockets))
