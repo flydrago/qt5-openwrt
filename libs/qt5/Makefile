@@ -10,12 +10,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qt5
-PKG_VERSION:=5.15.12
-PKG_MD5SUM:=3fb1cd4f763f5d50d491508b7b99fb77
+PKG_VERSION:=5.9.1
+PKG_MD5SUM:=77b4af61c49a09833d4df824c806acaf
 
 PKG_SOURCE:=qt-everywhere-opensource-src-$(PKG_VERSION).tar.xz
-PKG_SOURCE_URL:=https://mirrors.aliyun.com/qt/archive/qt/5.15/$(PKG_VERSION)/single
-PKG_BUILD_DIR=$(BUILD_DIR)/qt-everywhere-src-$(PKG_VERSION)
+PKG_SOURCE_URL:=https://download.qt.io/new_archive/qt/5.9/$(PKG_VERSION)/single
+PKG_BUILD_DIR=$(BUILD_DIR)/qt-everywhere-opensource-src-$(PKG_VERSION)
 PKG_BUILD_PARALLEL:=1
 PKG_USE_MIPS16:=0
 PKG_BUILD_DEPENDS:=libiconv
@@ -162,7 +162,7 @@ define Build/Configure
 			-skip activeqt \
 			-skip qtdoc \
 			-skip qtconnectivity \
-			-skip wayland \
+			-skip qtwayland \
 			-skip qtscript \
 			-no-sql-mysql \
 			-v \
