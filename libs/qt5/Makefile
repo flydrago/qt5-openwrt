@@ -14,7 +14,7 @@ PKG_VERSION:=5.9.1
 PKG_MD5SUM:=77b4af61c49a09833d4df824c806acaf
 
 PKG_SOURCE:=qt-everywhere-opensource-src-$(PKG_VERSION).tar.xz
-PKG_SOURCE_URL:=https://download.qt.io/new_archive/qt/5.9/$(PKG_VERSION)/single
+PKG_SOURCE_URL:=https://usp-assets.youshupai.com/qt/5.9/$(PKG_VERSION)/single
 PKG_BUILD_DIR=$(BUILD_DIR)/qt-everywhere-opensource-src-$(PKG_VERSION)
 PKG_BUILD_PARALLEL:=1
 PKG_USE_MIPS16:=0
